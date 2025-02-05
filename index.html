@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Back to School Embedding ⭐</title>
+    <!--Link to Skeleton Style Sheet which makes it look nicer-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+      integrity="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY="
+      crossorigin="anonymous"
+    />
+  </head>
+  <script
+    type="module"
+    src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"
+  ></script>
+  <script src=".\script.js" defer></script>
+  <!-- Top section is the metadata of the webpage whilst the 'body' is content we see -->
+  <body>
+    <h1>Back to School Embedding Website 🤷‍♀️</h1>
+    <!-- Buttons to interact with dashboard -->
+    <fieldset id="firstset">
+      <legend>Filter Dashboard</legend>
+      <input type="button" value="Organic and Direct" id="organic-and-direct" />
+      <input type="button" value="Clear Filter" id="clear" />
+      <input type="button" value="Undo" id="undo" />
+    </fieldset>
+    <!-- Second set of buttons - min/max values -->
+    <fieldset id="secondset">
+      <legend>Visits Filter</legend>
+      <input type="number" placeholder="Min Value" id="min_value" />
+      <input type="number" placeholder="Max Value" id="max_value" />
+      <input type="button" value="Apply" id="apply_button" />
+    </fieldset>
+    <div class="content">
+      <!-- Tableau Viz link to embed -->
+      <tableau-viz
+        id="tableau-viz1"
+        src="https://public.tableau.com/views/WebAnalyticsMarketingDashboard/Overview"
+        toolbar="bottom"
+        hide-tabs
+        height="100vh"
+        width="100vw"
+      >
+      </tableau-viz>
+    </div>
+  </body>
+</html>
